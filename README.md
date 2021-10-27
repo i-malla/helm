@@ -20,4 +20,6 @@ helm lint
 helm template .  
 helm template . | kubectl apply -f -  
 
+#### my-template
+labels: {{- include "labels" . | nindent 4 }} <!-- new line indentation -->  
 
