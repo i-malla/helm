@@ -1,12 +1,21 @@
-# helm
-Helm installation in centos 7 : Helm installation
-https://get.helm.sh/helm-v3.7.1-linux-amd64.tar.gz
-tar -xvzf helm-v3.7.1-linux-amd64.tar.gz
-cd linux-amd64/
-mv helm /usr/local/bin/
+# HELM
+
+#### Helm installation in centos 7 :  
+wget https://get.helm.sh/helm-v3.7.1-linux-amd64.tar.gz  
+tar -xvzf helm-v3.7.1-linux-amd64.tar.gz  
+cd linux-amd64/  
+mv helm /usr/local/bin/    
+
+#### Commands
+helm create application-1  
+helm install chart-1  
+helm list  
+helm uninstall chart-1   
+
+#### Troubleshooting:  
+Stay in folder where the charts are available --> /root/charts/helm/application-1  
+helm lint  
+helm template .  
+helm template . | kubectl apply -f -  
 
 
-helm create application-1
-helm install chart-1
-helm list
-helm uninstall chart-1
